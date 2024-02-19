@@ -13,16 +13,16 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 function NavList() {
   return (
     <ul className="my-2 no-underline flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <p className="text-sm">Home</p>
-      <p className="text-sm">Services</p>
-      <p className="text-sm">About</p>
-      <p className="text-sm">Blogs</p>
-      <button className="btn  ">Sign Up</button>
+      <Link to='/' className="text-sm">Home</Link>
+      <Link to='/' className="text-sm">Services</Link>
+      <Link to='/' className="text-sm">About</Link>
+      <Link to='/' className="text-sm">Blogs</Link>
+      <button className="btn  ">Sign Up</button> 
       <button className="btn bg-black text-white">Sign In</button>
     </ul>
   );
 }
- 
+  
 export function NavbarSimple() {
   const [openNav, setOpenNav] = React.useState(false);
  

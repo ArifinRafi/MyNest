@@ -1,19 +1,24 @@
 import React from 'react';
-import homepic from '../assets/images/landingPage.png'
-import homepic2 from '../assets/images/homepic2.png'
+import homepic from '../assets/images/landingPage.png';
+import homepic2 from '../assets/images/homepic2.png';
 
 const Home = () => {
-        return (
-                <div className='grid grid-cols-2'>
-                <div className=''>
-                <img className='h-[40rem] relative inset-0 h-[40rem]  ' src={homepic2} alt="" />
-                <h1 className='absolute inset-0 mt-[300px] mr-[45rem] font-bold  items-center  text-5xl'>Your Dream Home</h1>
-                <h1 className='absolute inset-0 mt-[340px] mr-[61rem] font-bold items-center  text-5xl'>Awaits</h1>
-                <button className=' inset-0 bg-black w-[10rem] mt-[26rem] ml-[24rem] text-white absolute hover:bg-white hover:text-black btn mr-[61rem] font-bold items-center hover:bg-gray-400 '>Get Started Now!</button>
+    return (
+        <div className='grid grid-cols-2'>
+            <div className='relative'>
+                <img className='lg:h-[40rem] h-96 relative inset-0' src={homepic2} alt="" />
+                <div className='flex flex-col lg:mt-40  absolute inset-0'>
+                    <h1 className='font-bold text-5xl'>Your Dream Home</h1>
+                    <h1 className='font-bold text-5xl'>Awaits</h1>
+                    <h3 className=''> <span className='font-bold'>Poperty Selling</span> is very easy with mynest.tech. Get all type of 
+property related selling solutions in one platform.</h3>
+                    <button className='inset-0 flex  bg-black w-[10rem] mt-72 lg:mt-36 text-white absolute hover:bg-white hover:text-black btn font-bold items-center hover:bg-gray-400'>Get Started Now!</button>
                 </div>
-                <img src={homepic} alt="" />
-                </div>
-        );
+                
+            </div>
+            <img className='lg:h-[40rem] h-96' src={homepic} alt="" />
+        </div>
+    );
 };
 
 export default Home;
