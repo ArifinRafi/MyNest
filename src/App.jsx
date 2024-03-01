@@ -6,8 +6,8 @@ function App() {
 
   return (
     <div className="max-w-screen-2xl mx-auto">
-      {/* <Homepage></Homepage> */}
-      <Footer></Footer>
+      {/* <Homepage></Homepage>
+      <Footer></Footer> */}
     </div>
   )
 }

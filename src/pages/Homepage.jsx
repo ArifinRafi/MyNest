@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import Property from '../components/Property';
 import RecommendedProps from './RecommendedProps';
+import PropertyDetails from './PropertyDetails';
 
 const Homepage = () => {
         return (
@@ -16,6 +17,7 @@ const Homepage = () => {
                 <Searchbar></Searchbar>
                 <RecommendedProps></RecommendedProps>
                 <Contact></Contact>
+                
     </div>
         );
 };
