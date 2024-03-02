@@ -1,0 +1,20 @@
+[
+        {
+                "image":"https://i.ibb.co/JvnmqR9/property.png",
+                "price":"1000000 BDT",
+                "address":"Uttara 10, Dhaka",
+                "type": "Flat",
+                "bedroom":"4 Bedroom",
+                "washroom":"3 Washroom",
+                "location":"Uttara, Dhaka"
+        },
+        {
+                "image":"https://i.ibb.co/JvnmqR9/property.png",
+                "price":"1000000 BDT",
+                "address":"Uttara 10, Dhaka",
+                "type": "Flat",
+                "bedroom":"4 Bedroom",
+                "washroom":"3 Washroom",
+                "location":"Uttara, Dhaka"
+        }
+]

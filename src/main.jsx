@@ -7,6 +7,7 @@ import Services from './pages/Services.jsx'
 import Homepage from './pages/Homepage.jsx'
 import Main from './Layout/Main.jsx'
 import PropertyDetails from './pages/PropertyDetails.jsx'
+import RecommendedProps from './pages/RecommendedProps.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children:[
       {path:'/', element:<Homepage></Homepage>},
       {path:'/details', element:<PropertyDetails></PropertyDetails>},
+      {path:'/properties', element:<RecommendedProps></RecommendedProps>},
     ]
   },
 ]);

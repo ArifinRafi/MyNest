@@ -17,6 +17,7 @@ function NavList() {
       <Link to='/' className="text-sm">Services</Link>
       <Link to='/' className="text-sm">About</Link>
       <Link to='/' className="text-sm">Blogs</Link>
+      <Link to='/properties' className="text-sm">Properties</Link>
       <button className="btn  ">Sign Up</button> 
       <button className="btn bg-black text-white">Sign In</button>
     </ul>

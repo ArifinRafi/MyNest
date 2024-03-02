@@ -3,9 +3,10 @@ import propImage from '../assets/images/propertyImage.jpg'
 import Carousel from '../components/Carousel';
 
 
+
 const PropertyDetails = () => {
         return (
-                <div className='bg-gray-200 h-[100rem]'>
+                <div className=' max-w-screen-2xl mx-auto bg-gray-200 h-[120rem]'>
                     <Carousel image={propImage} ></Carousel> 
                     <div className=''>
                     <div className='flex justify-around '>
@@ -63,8 +64,50 @@ const PropertyDetails = () => {
 
                           {/* attachments */}
 
-                          <div><h2 className='text-2xl mt-2 bg-white'>Attachments</h2></div>
+                        <div><h2 className='text-2xl h-32 mt-2 bg-white'>Attachments</h2></div>
+
+
+                        {/* location */}
+
+                        <div className='bg-white mt-4'>
+                                <h2 className='text-2xl p-4'>Location</h2>
+                                <p>740, Afroza Begum Road, G, Bashundhara R/A</p>
                         </div>
+
+                        {/* propertyVideo */}
+                        <div className='bg-white mt-4'>
+                        <div className='flex'>
+                        <h2 className='text-2xl btn bg-white'>Property Video</h2>
+                        <button className='text-2xl bg-white btn'>Virtual Tour</button>
+                        </div>
+                        <div className=' flex items-center pb-12 flex-col mt-4'>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/nXBj1ugNaJM?si=xhXq6xYLRn1WWBO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        </div>
+
+                        <div className='bg-white mt-4'>
+                                <h1 className='text-2xl p-4'>Facilities</h1>
+
+                                <table className="table">
+    {/* head */}
+                                <thead>
+                                </thead>
+                                <tbody>
+                                {/* row 1 */}
+                                <tr>
+                                        <td>City Center: </td>
+                                        <td>Hospital:</td>
+                                </tr>
+                                {/* row 2 */}
+                                <tr>
+                                        <td>Shop:</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                        </div>
+                        </div>
+
+                        
 
                         <div className='bg-white flex flex-col  items-center'>
                                 <h2 className='text-2xl'>Contact Admin</h2>
@@ -74,8 +117,7 @@ const PropertyDetails = () => {
                                 <input type="text" placeholder="Mail" className="input input-bordered w-full max-w-xs" />       
                                 <input type="text" placeholder="Phone" className="input input-bordered w-full max-w-xs" />       
                                 <input type="text" placeholder="Message" className="input input-bordered w-full max-w-xs h-32" /> 
-                                <button className='btn btn-primary mb-4 bg-black text-white border-none'> Send Message</button>      
-                                        
+                                <button className='btn btn-primary mb-4 bg-black text-white border-none'> Send Message</button>               
                                 </div>
                         </div>
                     </div>   
