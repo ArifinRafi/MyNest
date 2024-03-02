@@ -8,6 +8,8 @@ import Homepage from './pages/Homepage.jsx'
 import Main from './Layout/Main.jsx'
 import PropertyDetails from './pages/PropertyDetails.jsx'
 import RecommendedProps from './pages/RecommendedProps.jsx'
+import Admin from './pages/Admin.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,8 @@ const router = createBrowserRouter([
       {path:'/', element:<Homepage></Homepage>},
       {path:'/details', element:<PropertyDetails></PropertyDetails>},
       {path:'/properties', element:<RecommendedProps></RecommendedProps>},
+      {path:'/admin', element:<Admin></Admin>},
+      {path:'/dashboard', element:<Dashboard></Dashboard>}
     ]
   },
 ]);
