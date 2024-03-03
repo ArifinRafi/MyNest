@@ -3,21 +3,43 @@
 const Dashboard = () => {
         const handleSubmit = event => {
                 event.preventDefault();
-                const propertyName = event.target.propertyName.value;
-                const imageLink = event.target.imageLink.value;
-                const price = event.target.price.value;
-                const address = event.target.address.value;
-                const bedrooms = event.target.bedrooms.value;
-                const washrooms = event.target.washrooms.value;
-                const year = event.target.year.value;
-                const videoLink = event.target.videoLink.value;
-                const location = event.target.location.value;
-                const description = event.target.description.value;
-                console.log(location);
+                const form = event.target;
+                const propertyName = form.propertyName.value;
+                const imageLink = form.imageLink.value;
+                const price = form.price.value;
+                const address = form.address.value;
+                const bedrooms = form.bedrooms.value;
+                const washrooms = form.washrooms.value;
+                const year = form.year.value;
+                const videoLink = form.videoLink.value;
+                const location = form.location.value;
+                const description = form.description.value;
+                const property = {propertyName, imageLink, price, address, bedrooms, washrooms, year, videoLink, location,description};
                 
-                
-
-        }
+                fetch('http://localhost:5000/properties', {
+                  method: "POST",
+                  headers: {
+                        'content-type': 'application/json'
+                  },
+                  body: JSON.stringify(property)      
+                })
+                .then(res=> res.json())
+                .then(data => {
+                  console.log(data);
+                  if(data.insertedId){
+                        alert('property added succesfully');
+                        form.reset();
+                  }
+                  else {
+                        alert('property added succesfully');
+                        form.reset();
+                        console.log("property added");
+                  }
+                })
+                .catch(error=> {
+                        console.log(error);
+                });
+        };
         return (
                 <div className='max-w-screen-2xl mx-auto'>
                         <form onSubmit={handleSubmit} action="" className='grid grid-cols-2 mt-12 mb-24  gap-4 justify-items-center items-center'>
