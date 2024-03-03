@@ -15,7 +15,7 @@ const Homepage = () => {
                 <Home></Home>
                 <Services></Services>
                 <Searchbar></Searchbar>
-                <RecommendedProps></RecommendedProps>
+                {/* <RecommendedProps></RecommendedProps> */}
                 <Contact></Contact>
                 
     </div>
