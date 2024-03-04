@@ -1,10 +1,13 @@
 import React from 'react';
 import propImage from '../assets/images/propertyImage.jpg'
 import Carousel from '../components/Carousel';
-
+import { useLoaderData, useParams } from 'react-router-dom';
 
 
 const PropertyDetails = () => {
+        const{index} = useParams();
+        const properties = useLoaderData();
+        const property = properties[index];
         return (
                 <div className=' max-w-screen-2xl mx-auto bg-gray-200 h-[120rem]'>
                     <Carousel image={propImage} ></Carousel> 
@@ -13,11 +16,11 @@ const PropertyDetails = () => {
                         {/* nameofthehouse */}
                         <div>
                                 <h1 className='text-4xl'>Full Furnished House</h1>
-                                <p className='text-sm'>Bashundhara Block I, Dhaka</p>
+                                <p className='text-sm'>{property.address}</p>
                         </div>
 
                         <div>
-                                <h1 className='text-4xl '>Price: 1000000BDT</h1>
+                                <h1 className='text-4xl '>Price: {property.price}</h1>
                         </div>        
                     </div>
 
@@ -26,7 +29,7 @@ const PropertyDetails = () => {
                         <div className=' col-span-3 '>
                           <div className='bg-white p-4'>
                           <h2 className='text-2xl'>Overview</h2>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corrupti iure rem qui nisi doloremque asperiores numquam dolor. Eveniet odio aspernatur non animi aperiam eaque illum ipsa exercitationem fugiat unde!</p> 
+                          <p>{property.description}</p> 
                           </div>
                           <div className='bg-white p-4 mt-4'>
                           <h2 className='text-2xl'>Details</h2>  
@@ -38,23 +41,23 @@ const PropertyDetails = () => {
     <tbody>
       {/* row 1 */}
       <tr>
-        <td>Property ID: </td>
+        <td>Property ID:{property.propertyName} </td>
         <td>Home area:</td>
       </tr>
       {/* row 2 */}
       <tr>
-        <td>Rooms:</td>
-        <td>Bed:</td>
+        <td>Rooms:{property.bedrooms}</td>
+        <td>Bed:{property.bedrooms}</td>
       </tr>
 
       <tr>
-        <td>Baths:</td>
-        <td>Price:</td>
+        <td>Baths:{property.washrooms}</td>
+        <td>Price:{property.price}</td>
       </tr>
 
       <tr>
-        <td>Year Built:</td>
-        <td>Status:</td>
+        <td>Year Built:{property.year}</td>
+        <td>Status:{property.description}</td>
       </tr>
 
     </tbody>
@@ -71,7 +74,7 @@ const PropertyDetails = () => {
 
                         <div className='bg-white mt-4'>
                                 <h2 className='text-2xl p-4'>Location</h2>
-                                <p>740, Afroza Begum Road, G, Bashundhara R/A</p>
+                                <p>{property.address}</p>
                         </div>
 
                         {/* propertyVideo */}

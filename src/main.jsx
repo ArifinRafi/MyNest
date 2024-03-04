@@ -18,7 +18,8 @@ const router = createBrowserRouter([
     element: <Main></Main>,
     children:[
       {path:'/', element:<Homepage></Homepage>},
-      {path:'/details/:index', element:<PropertyDetails></PropertyDetails>},
+      {path:'/details/:index', element:<PropertyDetails></PropertyDetails>,
+      loader:()=> fetch('http://localhost:5000/properties')},
       {path:'/properties', element:<RecommendedProps></RecommendedProps>,
     loader:()=> fetch('http://localhost:5000/properties')},
       {path:'/admin', element:<Admin></Admin>},
