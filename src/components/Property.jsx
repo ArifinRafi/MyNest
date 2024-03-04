@@ -3,6 +3,7 @@ import property1 from '../assets/images/property.png'
 import bedroom from '../assets/logos/bedroom.png';
 import washroom from '../assets/logos/washroom.png';
 import size from '../assets/logos/size.png';
+import { Link } from 'react-router-dom';
 
 const Property = (props) => {
         return (
@@ -30,7 +31,7 @@ const Property = (props) => {
 
                         </div>
                         <div className='flex justify-center'>
-                                <button className='btn btn-primary border-none text-white hover:bg-gray-400 hover:text-black bg-black'>View Details</button>
+                                <Link to={`/details/${index}`} className='btn btn-primary border-none text-white hover:bg-gray-400 hover:text-black bg-black'>View Details</Link>
                         </div>
                         </div>
                 </div>
